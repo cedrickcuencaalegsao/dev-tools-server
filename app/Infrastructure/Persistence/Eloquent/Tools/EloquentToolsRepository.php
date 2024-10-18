@@ -39,11 +39,18 @@ class EloquentToolsRepository implements ToolsRepository
     }
     public function findAll(): array
     {
-        return ToolsModel::all()->map(fn($toolsModel) => new Tools(
-            id: $toolsModel->id,
-            name: $toolsModel->name,
-            category: $toolsModel->category,
-            language: $toolsModel->language,
-        ))->toArray();
+        return ToolsModel::all()->map(function ($tool) {
+            return new Tools(
+                $tool->id,
+                $tool->name,
+                $tool->category,
+                $tool->language,
+                $tool->description,
+                $tool->documentation_url,
+                $tool->image,
+                $tool->created_at,
+                $tool->updated_at
+            );
+        })->toArray();
     }
 }

@@ -9,5 +9,5 @@ class ToolsModel  extends Model
 {
     use HasFactory;
     protected $table = 'tools';
-    protected $fillable = ['id', 'name', 'category', 'language', 'documentation_url', 'description', 'created_at', 'updated_at'];
+    protected $fillable = ['id', 'name', 'category', 'language',  'description', 'documentation_url', 'image', 'created_at', 'updated_at'];
 }
