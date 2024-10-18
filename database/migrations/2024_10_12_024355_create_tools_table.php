@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('tools', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->json('category')->nullable();
+            $table->json('category')->nullable(); // JSON type for category
             $table->string('language')->nullable();
             $table->longText('documentation_url')->nullable();
             $table->longText('description')->nullable();
-            $table->string('created_at')->nullable();
-            $table->string('updated_at')->nullable();
+            $table->string('image')->default('default.jpg'); // Set default image
+            $table->timestamps(); // Automatically creates created_at and updated_at as timestamps
         });
     }
 
