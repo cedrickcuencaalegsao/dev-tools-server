@@ -39,4 +39,15 @@ class RegisterTools
     {
         return $this->toolsRepository->findAll();
     }
+    public function searchTools(string $searchTerm): array
+    {
+        $result = $this->toolsRepository->searchByTerm($searchTerm);
+
+        return [
+            'exactMatch' => $result['exactMatch'] ? $result['exactMatch']->toArray() : null,
+            'relatedItems' => array_map(function ($tool) {
+                return $tool->toArray();
+            }, $result['relatedItems'])
+        ];
+    }
 }
