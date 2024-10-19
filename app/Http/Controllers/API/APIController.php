@@ -7,6 +7,7 @@ use App\Domain\Tools\Tools;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class APIController extends Controller
 {
@@ -18,6 +19,15 @@ class APIController extends Controller
     public function index()
     {
         return response()->json("Hello World!");
+    }
+    public function getTool(int $id)
+    {
+        $tool = $this->registerTools->findByID($id);
+
+        if ($tool === null) {
+            return response()->json(['message' => 'Tool not found.'], 404);
+        }
+        return response()->json(['data' => $tool->toArray()], 200);
     }
     public function FindAll(): JsonResponse
     {

@@ -65,13 +65,16 @@ class Tools
     {
         return $this->language;
     }
-    public function getDocumentation()
+    public function getDescription()
     {
         return $this->description;
     }
     public function getDocumentationURL()
     {
         return $this->documentationURL;
+    }
+    public function getImage(){
+        return $this->image;
     }
     public function created()
     {

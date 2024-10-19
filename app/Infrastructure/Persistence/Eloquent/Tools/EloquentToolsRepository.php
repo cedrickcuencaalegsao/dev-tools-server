@@ -15,6 +15,12 @@ class EloquentToolsRepository implements ToolsRepository
         $toolsModel->name = $tools->getName();
         $toolsModel->category = $tools->getCategory();
         $toolsModel->language = $tools->getLanguage();
+        $toolsModel->documentation = $tools->getDescription();
+        $toolsModel->documentation_url = $tools->getDocumentationURL();
+        $toolsModel->image = $tools->getImage();
+        $toolsModel->created_at = $tools->created();
+        $toolsModel->update_at = $tools->updated();
+        $toolsModel->save();
     }
     public function update(Tools $tools): void
     {
@@ -23,6 +29,12 @@ class EloquentToolsRepository implements ToolsRepository
         $toolsModel->name = $tools->getName();
         $toolsModel->category = $tools->getCategory();
         $toolsModel->language = $tools->getLanguage();
+        $toolsModel->documentation = $tools->getDescription();
+        $toolsModel->documentation_url = $tools->getDocumentationURL();
+        $toolsModel->image = $tools->getImage();
+        $toolsModel->created_at = $tools->created();
+        $toolsModel->update_at = $tools->updated();
+        $toolsModel->save();
     }
     public function findByID(int $id): ?Tools
     {
@@ -35,6 +47,11 @@ class EloquentToolsRepository implements ToolsRepository
             $toolsModel->name,
             $toolsModel->category,
             $toolsModel->language,
+            $toolsModel->description,
+            $toolsModel->documentation_url,
+            $toolsModel->image,
+            $toolsModel->created_at,
+            $toolsModel->updated_at,
         );
     }
     public function findAll(): array
