@@ -53,4 +53,44 @@ class EloquentToolsRepository implements ToolsRepository
             );
         })->toArray();
     }
+    public function searchByTerm(string $serachTerm): array
+    {
+        $exactMatch = ToolsModel::where('name', $serachTerm)->orWhere('description', $serachTerm)->orWhere('language', $serachTerm)->orWhere('category', $serachTerm)->first();
+
+        $relatedItems = ToolsModel::where('id', '!=', $exactMatch?->id)->where(
+            function ($query) use ($serachTerm) {
+                $query->where('name', 'LIKE', "%{$serachTerm}%")
+                    ->orWhere('description', 'LIKE', "%{$serachTerm}%")
+                    ->orWhere('language', 'LIKE', "%{$serachTerm}%")
+                    ->orWhere('category', 'LIKE', "%{$serachTerm}%");
+            }
+        )->get();
+
+        return [
+            'exactMatch' => $exactMatch ? new Tools(
+                $exactMatch->id,
+                $exactMatch->name,
+                $exactMatch->category,
+                $exactMatch->language,
+                $exactMatch->description,
+                $exactMatch->documentation_url,
+                $exactMatch->image,
+                $exactMatch->created_at,
+                $exactMatch->updated_at,
+            ) : null,
+            'relatedItems' => $relatedItems->map(function ($tools) {
+                return new Tools(
+                    $tools->id,
+                    $tools->name,
+                    $tools->category,
+                    $tools->language,
+                    $tools->description,
+                    $tools->documentation_url,
+                    $tools->image,
+                    $tools->created_at,
+                    $tools->updated_at,
+                );
+            })->toArray()
+        ];
+    }
 }

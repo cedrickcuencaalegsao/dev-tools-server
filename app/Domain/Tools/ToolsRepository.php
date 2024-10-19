@@ -8,4 +8,5 @@ interface ToolsRepository
     public function update(Tools $tools): void;
     public function findByID(int $id): ?Tools;
     public function findAll(): array;
+    public function searchByTerm(string $serachTerm): array;
 }
