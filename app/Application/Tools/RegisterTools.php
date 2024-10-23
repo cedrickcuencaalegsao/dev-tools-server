@@ -50,4 +50,22 @@ class RegisterTools
             }, $result['relatedItems'])
         ];
     }
+    public function getToolsOrderedByClickCount(): array
+    {
+        return $this->toolsRepository->getAllOrderedByClickCount();
+    }
+    public function updateClickCount(int $id)
+    {
+         // Find the tool
+        $tool = $this->toolsRepository->findByID($id);
+        if (!$tool) {
+            throw new \Exception('Tool Not Found.');
+        }
+
+        // Increment the click count
+        $tool->incrementClickCount();
+
+        // Update the click count in the repository
+        $this->toolsRepository->updateClickCount($tool->getId(), $tool->getClickCount());
+    }
 }

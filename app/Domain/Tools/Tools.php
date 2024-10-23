@@ -11,6 +11,7 @@ class Tools
     private ?string $description;
     private ?string $documentationURL;
     private ?string $image;
+    private ?int $clickCount;
     private ?string $created_at;
     private ?string $updated_at;
 
@@ -22,6 +23,7 @@ class Tools
         ?string $description = null,
         ?string $documentationURL = null,
         ?string $image = null,
+        ?int $clickCount = null,
         ?string $created_at = null,
         ?string $updated_at = null,
     ) {
@@ -32,6 +34,7 @@ class Tools
         $this->description = $description;
         $this->documentationURL = $documentationURL;
         $this->image = $image;
+        $this->clickCount = $clickCount;
         $this->created_at = $created_at;
         $this->updated_at = $updated_at;
     }
@@ -44,7 +47,8 @@ class Tools
             'language' => $this->language,
             'description' => $this->description,
             'documentationURL' => $this->documentationURL,
-            'image'=> $this->image,
+            'image' => $this->image,
+            'clickCount' => $this->clickCount,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
@@ -73,8 +77,13 @@ class Tools
     {
         return $this->documentationURL;
     }
-    public function getImage(){
+    public function getImage()
+    {
         return $this->image;
+    }
+    public function getClickCount()
+    {
+        return $this->clickCount;
     }
     public function created()
     {
@@ -83,5 +92,9 @@ class Tools
     public function updated()
     {
         return $this->updated_at;
+    }
+    public function incrementClickCount(): void
+    {
+        $this->clickCount++;
     }
 }
