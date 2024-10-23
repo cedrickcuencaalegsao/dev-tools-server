@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->json('category')->nullable(); // JSON type for category
             $table->string('language')->nullable();
+            $table->unsignedBigInteger('clickCount')->nullable();
             $table->longText('documentation_url')->nullable();
             $table->longText('description')->nullable();
             $table->string('image')->default('default.jpg'); // Set default image

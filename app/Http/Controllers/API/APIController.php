@@ -52,4 +52,18 @@ class APIController extends Controller
 
         return response()->json($result);
     }
+    public function getTrending()
+    {
+        $tools = $this->registerTools->getToolsOrderedByClickCount();
+        return response()->json(['data' => $tools], 200);
+    }
+    public function updateClickCount(int $id)
+    {
+        try {
+            $this->registerTools->updateClickCount($id);
+            return response()->json(true, 200);
+        } catch (\Throwable $th) {
+            return response()->json(false, 400);
+        }
+    }
 }
