@@ -56,7 +56,7 @@ class RegisterTools
     }
     public function updateClickCount(int $id)
     {
-         // Find the tool
+        // Find the tool
         $tool = $this->toolsRepository->findByID($id);
         if (!$tool) {
             throw new \Exception('Tool Not Found.');
@@ -67,5 +67,21 @@ class RegisterTools
 
         // Update the click count in the repository
         $this->toolsRepository->updateClickCount($tool->getId(), $tool->getClickCount());
+    }
+    public function getLatest()
+    {
+        return $this->toolsRepository->getLatest();
+    }
+    public function getOldest()
+    {
+        return $this->toolsRepository->getOldest();
+    }
+    public function getAtoZ()
+    {
+        return $this->toolsRepository->getAtoZ();
+    }
+    public function getZtoA()
+    {
+        return $this->toolsRepository->getZtoA();
     }
 }

@@ -149,4 +149,32 @@ class EloquentToolsRepository implements ToolsRepository
             throw new \Exception('Tool Not Found!');
         }
     }
+    /**
+     * Get latest.
+     **/
+    public function getLatest(): array
+    {
+        return ToolsModel::orderBy('created_at', 'desc')->get()->toArray();
+    }
+    /**
+     * Get ordest.
+     **/
+    public function getOldest(): array
+    {
+        return ToolsModel::orderBy('created_at', 'asc')->get()->toArray();
+    }
+    /**
+     * Get A to Z.
+     **/
+    public function getAtoZ(): array
+    {
+        return ToolsModel::orderBy('name', 'asc')->get()->toArray();
+    }
+    /**
+     * Get Z to A.
+     **/
+    public function getZtoA(): array
+    {
+        return ToolsModel::orderBy('name', 'desc')->get()->toArray();
+    }
 }

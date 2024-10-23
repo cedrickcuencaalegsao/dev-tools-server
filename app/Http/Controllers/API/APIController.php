@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\API;
 
 use App\Application\Tools\RegisterTools;
-use App\Domain\Tools\Tools;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class APIController extends Controller
 {
@@ -65,5 +63,25 @@ class APIController extends Controller
         } catch (\Throwable $th) {
             return response()->json(false, 400);
         }
+    }
+    public function getLatest()
+    {
+        $tools = $this->registerTools->getLatest();
+        return response()->json(['data' => $tools], 200);
+    }
+    public function getOldest()
+    {
+        $tools = $this->registerTools->getOldest();
+        return response()->json(['data' => $tools], 200);
+    }
+    public function getAtoZ()
+    {
+        $tools = $this->registerTools->getAtoZ();
+        return response()->json(['data' => $tools], 200);
+    }
+    public function getZtoA()
+    {
+        $tools = $this->registerTools->getZtoA();
+        return response()->json(['data' => $tools], 200);   
     }
 }

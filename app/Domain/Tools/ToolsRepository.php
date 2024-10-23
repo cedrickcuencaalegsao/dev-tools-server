@@ -11,4 +11,8 @@ interface ToolsRepository
     public function searchByTerm(string $serachTerm): array;
     public function getAllOrderedByClickCount(): array;
     public function updateClickCount(int $id, int $ClickCount): void;
+    public function getLatest(): array;
+    public function getOldest(): array;
+    public function getAtoZ(): array;
+    public function getZtoA(): array;
 }
