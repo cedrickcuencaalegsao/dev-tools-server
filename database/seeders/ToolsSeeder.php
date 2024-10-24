@@ -17,7 +17,7 @@ class ToolsSeeder extends Seeder
         DB::table('tools')->insert([
             [
                 'name' => 'React',
-                'category' => json_encode(['Web Development']),
+                'category' => json_encode(['Web Development', 'Framework', 'JavaScript', 'TypeScript']),
                 'language' => 'JavaScript/TypeScript',
                 'description' => 'A JavaScript library for building user interfaces.',
                 'documentation_url' => 'https://reactjs.org/docs/getting-started.html',
@@ -28,7 +28,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Vue.js',
-                'category' => json_encode(['Web Development']),
+                'category' => json_encode(['Web Development', 'Framework', 'JavaScript', 'TypeScript']),
                 'language' => 'JavaScript/TypeScript',
                 'description' => 'A progressive framework for building user interfaces.',
                 'documentation_url' => 'https://vuejs.org/v2/guide/',
@@ -40,7 +40,7 @@ class ToolsSeeder extends Seeder
 
             [
                 'name' => 'Eva Design System',
-                'category' => json_encode(['color palette']),
+                'category' => json_encode(['Color Palette']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://colors.eva.design/',
                 'description' => 'A design system that provides a consistent interface for applications.',
@@ -51,7 +51,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Feather Icons',
-                'category' => json_encode(['icons']),
+                'category' => json_encode(['Icons']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://feathericons.com/',
                 'description' => 'A collection of beautiful open-source icons.',
@@ -62,7 +62,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Boxicons',
-                'category' => json_encode(['icons']),
+                'category' => json_encode(['Icons']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://boxicons.com/',
                 'description' => 'A free collection of carefully crafted icons.',
@@ -73,7 +73,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Polaris Icons',
-                'category' => json_encode(['icons', 'components', 'layouts']),
+                'category' => json_encode(['Icons', 'Components', 'Layouts']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://polaris.shopify.com/icons',
                 'description' => 'A set of icons designed for Shopify applications.',
@@ -84,7 +84,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Pigment',
-                'category' => json_encode(['color palette']),
+                'category' => json_encode(['Color Palette']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://pigment.shapefactory.co/',
                 'description' => 'A tool for generating color palettes.',
@@ -95,7 +95,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'LOL Colors',
-                'category' => json_encode(['color palette']),
+                'category' => json_encode(['Color Palette']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://www.webdesignrankings.com/resources/lolcolors/',
                 'description' => 'A resource for color palettes inspired by the game League of Legends.',
@@ -106,7 +106,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Daisy UI',
-                'category' => json_encode(['component', 'tailwind']),
+                'category' => json_encode(['Component', 'Tailwind']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://daisyui.com/docs/install/',
                 'description' => 'A component library built on Tailwind CSS.',
@@ -117,7 +117,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'React Icons',
-                'category' => json_encode(['icons', 'reactjs', 'nextjs']),
+                'category' => json_encode(['Icons', 'ReactJs', 'NextJs']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://react-icons.github.io/react-icons/',
                 'description' => 'A library for including popular icons in React applications.',
@@ -128,7 +128,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Color Safe',
-                'category' => json_encode(['color palette', 'accessibility']),
+                'category' => json_encode(['Color Palette', 'Accessibility']),
                 'language' => 'N/A',
                 'documentation_url' => 'http://colorsafe.co/',
                 'description' => 'A tool for creating color palettes that meet accessibility standards.',
@@ -139,7 +139,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Who Can Use',
-                'category' => json_encode(['color palette', 'accessibility']),
+                'category' => json_encode(['Color Palette', 'Accessibility']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://www.whocanuse.com/',
                 'description' => 'A tool that helps users check color contrast ratios.',
@@ -150,7 +150,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'A11y Project',
-                'category' => json_encode(['accessibility']),
+                'category' => json_encode(['Accessibility']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://www.a11yproject.com/',
                 'description' => 'A community-driven effort to improve web accessibility.',
@@ -161,7 +161,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Accessible Brand Colors',
-                'category' => json_encode(['accessibility']),
+                'category' => json_encode(['Accessibility']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://abc.useallfive.com/',
                 'description' => 'A resource for accessible color choices for branding.',
@@ -172,7 +172,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Contrast Grid',
-                'category' => json_encode(['accessibility']),
+                'category' => json_encode(['Accessibility']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%23404040%2C%20Charcoal%0D%0A%23000000%2C%20Black%0D%0A%232F78C5%2C%20Effective%20on%20Extremes%0D%0A%230F60B6%2C%20Effective%20on%20Lights%0D%0A%23398EEA%2C%20Ineffective%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp',
                 'description' => 'A tool for checking color contrast between elements.',
@@ -183,7 +183,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Figma',
-                'category' => json_encode(['design tools']),
+                'category' => json_encode(['Design Tools']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://www.figma.com/',
                 'description' => 'A web-based UI design tool for collaborative design.',
@@ -194,7 +194,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Sketch',
-                'category' => json_encode(['design tools']),
+                'category' => json_encode(['Design Tools']),
                 'language' => 'N/A',
                 'documentation_url' => 'https://www.sketch.com/',
                 'description' => 'A vector graphics editor for macOS for designing interfaces.',
@@ -228,7 +228,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Django',
-                'category' => json_encode(['Web Framework']),
+                'category' => json_encode(['Web Framework', 'Python']),
                 'language' => 'Python',
                 'documentation_url' => 'https://www.djangoproject.com/',
                 'description' => 'A high-level Python web framework that encourages rapid development and clean, pragmatic design.',
@@ -239,7 +239,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Flask',
-                'category' => json_encode(['Web Framework']),
+                'category' => json_encode(['Web Framework', 'Python']),
                 'language' => 'Python',
                 'documentation_url' => 'https://flask.palletsprojects.com/',
                 'description' => 'A lightweight WSGI web application framework in Python.',
@@ -250,7 +250,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Angular',
-                'category' => json_encode(['JavaScript Framework']),
+                'category' => json_encode(['Web Development', 'JavaScript', 'Framework']),
                 'language' => 'TypeScript',
                 'documentation_url' => 'https://angular.io/',
                 'description' => 'A platform for building mobile and desktop web applications.',
@@ -261,7 +261,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Laravel',
-                'category' => json_encode(['PHP Framework']),
+                'category' => json_encode(['PHP Framework', 'Web Development']),
                 'language' => 'PHP',
                 'documentation_url' => 'https://laravel.com/',
                 'description' => 'A web application framework with expressive, elegant syntax.',
@@ -272,7 +272,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Express.js',
-                'category' => json_encode(['Web Framework']),
+                'category' => json_encode(['JavaScript', 'Framework']),
                 'language' => 'JavaScript',
                 'documentation_url' => 'https://expressjs.com/',
                 'description' => 'A minimal and flexible Node.js web application framework that provides a robust set of features.',
@@ -283,7 +283,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Ruby on Rails',
-                'category' => json_encode(['Web Framework']),
+                'category' => json_encode(['Web Development', 'Ruby', 'Framework']),
                 'language' => 'Ruby',
                 'documentation_url' => 'https://rubyonrails.org/',
                 'description' => 'A web-application framework that includes everything needed to create database-backed web applications.',
@@ -294,7 +294,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Spring Boot',
-                'category' => json_encode(['Java Framework']),
+                'category' => json_encode(['Web Development', 'Java', 'Framework']),
                 'language' => 'Java',
                 'documentation_url' => 'https://spring.io/projects/spring-boot',
                 'description' => 'A framework that simplifies the setup of new Spring applications.',
@@ -316,7 +316,7 @@ class ToolsSeeder extends Seeder
             ],
             [
                 'name' => 'Next.js',
-                'category' => json_encode(['React Framework']),
+                'category' => json_encode(['React Framework', 'Framework']),
                 'language' => 'JavaScript',
                 'documentation_url' => 'https://nextjs.org/',
                 'description' => 'A React framework that enables server-side rendering and generating static websites.',
