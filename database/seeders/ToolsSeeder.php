@@ -16,7 +16,7 @@ class ToolsSeeder extends Seeder
     {
         DB::table('tools')->insert([
             [
-                'name' => 'React',
+                'name' => 'React JS',
                 'category' => json_encode(['Web Development', 'Framework', 'JavaScript', 'TypeScript']),
                 'language' => 'JavaScript/TypeScript',
                 'description' => 'A JavaScript library for building user interfaces.',
@@ -24,10 +24,10 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'reactjs.jpg',
             ],
             [
-                'name' => 'Vue.js',
+                'name' => 'Vue JS',
                 'category' => json_encode(['Web Development', 'Framework', 'JavaScript', 'TypeScript']),
                 'language' => 'JavaScript/TypeScript',
                 'description' => 'A progressive framework for building user interfaces.',
@@ -35,7 +35,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'vuejs.jpg',
             ],
 
             [
@@ -47,7 +47,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'eva-design-system.PNG',
             ],
             [
                 'name' => 'Feather Icons',
@@ -58,7 +58,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'feather-icon.PNG',
             ],
             [
                 'name' => 'Boxicons',
@@ -113,7 +113,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'daisyui.jpg',
             ],
             [
                 'name' => 'React Icons',
@@ -204,7 +204,7 @@ class ToolsSeeder extends Seeder
                 'image' => 'default.jpg',
             ],
             [
-                'name' => 'Bootstrap',
+                'name' => 'Bootstrap CSS',
                 'category' => json_encode(['CSS Framework']),
                 'language' => 'HTML, CSS, JavaScript',
                 'documentation_url' => 'https://getbootstrap.com/',
@@ -249,7 +249,7 @@ class ToolsSeeder extends Seeder
                 'image' => 'default.jpg',
             ],
             [
-                'name' => 'Angular',
+                'name' => 'Angular JS',
                 'category' => json_encode(['Web Development', 'JavaScript', 'Framework']),
                 'language' => 'TypeScript',
                 'documentation_url' => 'https://angular.io/',
@@ -315,7 +315,7 @@ class ToolsSeeder extends Seeder
                 'image' => 'default.jpg',
             ],
             [
-                'name' => 'Next.js',
+                'name' => 'Next JS',
                 'category' => json_encode(['React Framework', 'Framework']),
                 'language' => 'JavaScript',
                 'documentation_url' => 'https://nextjs.org/',
