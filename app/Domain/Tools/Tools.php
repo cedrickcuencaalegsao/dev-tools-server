@@ -9,7 +9,7 @@ class Tools
     private ?string $category;
     private ?string $language;
     private ?string $description;
-    private ?string $documentationURL;
+    private ?string $documentation_url;
     private ?string $image;
     private ?int $clickCount;
     private ?string $created_at;
@@ -21,7 +21,7 @@ class Tools
         ?string $category = null,
         ?string $language = null,
         ?string $description = null,
-        ?string $documentationURL = null,
+        ?string $documentation_url = null,
         ?string $image = null,
         ?int $clickCount = null,
         ?string $created_at = null,
@@ -32,7 +32,7 @@ class Tools
         $this->category = $category;
         $this->language = $language;
         $this->description = $description;
-        $this->documentationURL = $documentationURL;
+        $this->documentation_url = $documentation_url;
         $this->image = $image;
         $this->clickCount = $clickCount;
         $this->created_at = $created_at;
@@ -46,7 +46,7 @@ class Tools
             'category' => $this->category,
             'language' => $this->language,
             'description' => $this->description,
-            'documentationURL' => $this->documentationURL,
+            'documentationURL' => $this->documentation_url,
             'image' => $this->image,
             'clickCount' => $this->clickCount,
             'created_at' => $this->created_at,
@@ -75,7 +75,7 @@ class Tools
     }
     public function getDocumentationURL()
     {
-        return $this->documentationURL;
+        return $this->documentation_url;
     }
     public function getImage()
     {
