@@ -46,7 +46,7 @@ class Tools
             'category' => $this->category,
             'language' => $this->language,
             'description' => $this->description,
-            'documentationURL' => $this->documentation_url,
+            'documentation_url' => $this->documentation_url,
             'image' => $this->image,
             'clickCount' => $this->clickCount,
             'created_at' => $this->created_at,
