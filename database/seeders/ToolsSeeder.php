@@ -235,7 +235,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'django.PNG',
             ],
             [
                 'name' => 'Flask',
@@ -271,7 +271,7 @@ class ToolsSeeder extends Seeder
                 'image' => 'laravel.png',
             ],
             [
-                'name' => 'Express.js',
+                'name' => 'Express JS',
                 'category' => json_encode(['JavaScript', 'Framework']),
                 'language' => 'JavaScript',
                 'documentation_url' => 'https://expressjs.com/',
@@ -279,7 +279,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'express-js.PNG',
             ],
             [
                 'name' => 'Ruby on Rails',
