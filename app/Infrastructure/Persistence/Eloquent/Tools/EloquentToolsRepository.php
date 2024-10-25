@@ -134,7 +134,10 @@ class EloquentToolsRepository implements ToolsRepository
      **/
     public function getAllOrderedByClickCount(): array
     {
-        return ToolsModel::orderBy('clickCount', 'desc')->get()->toArray();
+        return ToolsModel::where('clickCount', '>=', 50)
+            ->orderBy('clickCount', 'desc')
+            ->get()
+            ->toArray();
     }
     /**
      * Update Click Counts that will be base the number of clicks, and use in trending tools.
