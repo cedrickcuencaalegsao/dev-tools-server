@@ -21,7 +21,7 @@ class ToolsSeeder extends Seeder
                 'language' => 'JavaScript/TypeScript',
                 'description' => 'A JavaScript library for building user interfaces.',
                 'documentation_url' => 'https://reactjs.org/docs/getting-started.html',
-                'clickCount' => 0,
+                'clickCount' => 50,
                 'created_at' => now(),
                 'updated_at' => now(),
                 'image' => 'reactjs.jpg',
@@ -32,7 +32,7 @@ class ToolsSeeder extends Seeder
                 'language' => 'JavaScript/TypeScript',
                 'description' => 'A progressive framework for building user interfaces.',
                 'documentation_url' => 'https://vuejs.org/v2/guide/',
-                'clickCount' => 0,
+                'clickCount' => 49,
                 'created_at' => now(),
                 'updated_at' => now(),
                 'image' => 'vuejs.jpg',
@@ -44,7 +44,7 @@ class ToolsSeeder extends Seeder
                 'language' => 'N/A',
                 'documentation_url' => 'https://colors.eva.design/',
                 'description' => 'A design system that provides a consistent interface for applications.',
-                'clickCount' => 0,
+                'clickCount' => 65,
                 'created_at' => now(),
                 'updated_at' => now(),
                 'image' => 'eva-design-system.PNG',
@@ -69,7 +69,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'boxicons.png',
             ],
             [
                 'name' => 'Polaris Icons',
@@ -91,7 +91,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'pigment.png',
             ],
             [
                 'name' => 'LOL Colors',
@@ -124,7 +124,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'react-icons.png',
             ],
             [
                 'name' => 'Color Safe',
@@ -146,7 +146,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'who-can-use.PNG',
             ],
             [
                 'name' => 'A11y Project',
@@ -190,7 +190,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'figma.png',
             ],
             [
                 'name' => 'Sketch',
@@ -201,7 +201,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'sketch.jpg',
             ],
             [
                 'name' => 'Bootstrap CSS',
@@ -213,7 +213,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'bootstrap.PNG',
             ],
             [
                 'name' => 'Tailwind CSS',
@@ -224,7 +224,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'tailwindcss.png',
             ],
             [
                 'name' => 'Django',
@@ -268,7 +268,7 @@ class ToolsSeeder extends Seeder
                 'clickCount' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'image' => 'default.jpg',
+                'image' => 'laravel.png',
             ],
             [
                 'name' => 'Express.js',
