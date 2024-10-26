@@ -8,6 +8,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/server/dasboard', [WebController::class, 'viewDashBoard']);
+Route::get('/server/dashboard', [WebController::class, 'viewDashBoard']);
 Route::get('/server/addtools', [WebController::class, 'viewAddTool']);
 Route::get('/server/updatetool/{id}', [WebController::class, 'viewAddTool']);
